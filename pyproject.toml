@@ -4,7 +4,6 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "vclean"
-version = "0.0.1"
 authors = [
     {name = "Ryota Wagatsuma", email = "cold_bz@ruri.waseda.jp"},
 ]
@@ -12,14 +11,14 @@ readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.8"
 dependencies = [
-    "pandas"
-    "numpy"
-    "matplotlib"
-    "seaborn"
-    "scikit-learn"
-    "lightgb"
-    "biopython"
-    "checkv"
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "seaborn",
+    "scikit-learn",
+    "lightgb",
+    "biopython",
+    "checkv",
     "seqkit",
     "kmer-jellyfish",
     "prodigal",
