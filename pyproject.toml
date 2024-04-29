@@ -9,20 +9,15 @@ authors = [
 ]
 readme = "README.md"
 license = {file = "LICENSE"}
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dependencies = [
     "pandas",
     "numpy",
     "matplotlib",
     "seaborn",
     "scikit-learn",
-    "lightgb",
+    "lightgbm",
     "biopython",
-    "checkv",
-    "seqkit",
-    "kmer-jellyfish",
-    "prodigal",
-    "mmseqs2",
 ]
 dynamic = ["version", "description"]
 
