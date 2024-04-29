@@ -1,0 +1,18 @@
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.8
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - lightgbm
+  - biopython
+  - checkv
+  - seqkit
+  - kmer-jellyfish
+  - prodigal
+  - mmseqs2
