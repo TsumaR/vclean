@@ -19,11 +19,11 @@ def download_database(args):
     if not os.path.exists(db_dir):
         os.makedirs(db_dir)
 
-    # checkv_download_command = sp.run(["checkv", "download_database", db_dir])
+    checkv_download_command = sp.run(["checkv", "download_database", db_dir])
     pfam_db_dir = db_dir + "/Pfam"
     if not os.path.exists(pfam_db_dir):
         os.makedirs(pfam_db_dir)
-    # pfam_download_command = sp.run(["wget", "-P", pfam_db_dir, "https://ftp.ebi.ac.uk/pub/databases/Pfam/releases/Pfam35.0/Pfam-A.hmm.gz"])
+    pfam_download_command = sp.run(["wget", "-P", pfam_db_dir, "https://ftp.ebi.ac.uk/pub/databases/Pfam/releases/Pfam35.0/Pfam-A.hmm.gz"])
     pfam_db = pfam_db_dir + "/Pfam-A.hmm.gz"
     unzipped_pfam_db = pfam_db_dir + "/Pfam-A.hmm"
     pfam_unzip = sp.run(["gunzip", pfam_db])
