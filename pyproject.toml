@@ -4,6 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "vclean"
+version = "0.1.0:
 authors = [
     {name = "Ryota Wagatsuma", email = "cold_bz@ruri.waseda.jp"},
 ]
@@ -19,7 +20,7 @@ dependencies = [
     "lightgbm",
     "biopython",
 ]
-dynamic = ["version", "description"]
+dynamic = ["description"]
 
 [project.urls]
 Home = "https://github.com/TsumaR/vclean"
