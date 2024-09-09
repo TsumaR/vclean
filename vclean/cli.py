@@ -1,8 +1,8 @@
 import argparse
 import sys
 
-from modules import run_for_cli as run_vclean
-from modules import download_database_for_cli as download_database
+from vclean.modules import run_for_cli as run_vclean
+from vclean.modules import download_database_for_cli as download_database
 
 def cli():
     parser = argparse.ArgumentParser(
