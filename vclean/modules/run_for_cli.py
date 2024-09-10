@@ -17,16 +17,16 @@ import shutil
 
 # original scripts
 # import seqkit as seqkit
-from modules import seqkit as seqkit
-from modules import checkv as checkv
-from modules import gc as gc
-from modules import tetra_jelly as tetra
-from modules import penta_jelly as penta
-from modules import codon as codon
-from modules import estimate_simu_contami as contami
-from modules import singlecopy_counts as scopy
-from modules import count_redundant_protein as red_pr
-from modules import lgb_model as lgb_model
+from vclean.modules import seqkit as seqkit
+from vclean.modules import checkv as checkv
+from vclean.modules import gc as gc
+from vclean.modules import tetra_jelly as tetra
+from vclean.modules import penta_jelly as penta
+from vclean.modules import codon as codon
+from vclean.modules import estimate_simu_contami as contami
+from vclean.modules import singlecopy_counts as scopy
+from vclean.modules import count_redundant_protein as red_pr
+from vclean.modules import lgb_model as lgb_model
 
 #################################################################################
 ############### Process for each file ###########################################
