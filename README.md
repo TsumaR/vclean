@@ -15,8 +15,10 @@ vclean run <input_fasta_dir> <output_dir> [options]
 # Installation
 You can install vClean as follows:
 ```bash
-conda install -c conda-forge -c bioconda vclean
+conda install -c conda-forge -c bioconda vclean python=3.9
 ```
+
+*Specify python version to be 3.9*
 
 # Database installation
 You have to download the databases.
