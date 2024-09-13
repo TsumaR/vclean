@@ -9,7 +9,7 @@ authors = [
 ]
 readme = "README.md"
 license = {file = "LICENSE"}
-requires-python = ">=3.9"
+requires-python = "==3.9"
 dependencies = [
     "pandas",
     "numpy",
@@ -27,3 +27,7 @@ Source = "https://github.com/TsumaR/vclean"
 
 [project.scripts]
 vclean = "vclean.cli:cli"
+
+[tool.setuptools.package-data]
+"vclean" = ["db/*.txt"]
+"vclean" = ["models/*.txt"]
