@@ -29,5 +29,4 @@ Source = "https://github.com/TsumaR/vclean"
 vclean = "vclean.cli:cli"
 
 [tool.setuptools.package-data]
-"vclean" = ["db/*.txt"]
-"vclean" = ["models/*.txt"]
+"vclean" = ["db/*.txt", "models/*.txt"]
