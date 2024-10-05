@@ -30,6 +30,3 @@ vclean = "vclean.cli:cli"
 
 [tool.flit.sdist]
 include = ["db/*.txt", "models/*.txt"]
-
-[tool.flit.wheel]
-include = ["db/*.txt", "models/*.txt"]
