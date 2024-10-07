@@ -34,7 +34,7 @@ from vclean.modules import lgb_model as lgb_model
 def process_file(input_fasta, outdir, run_mode, tmpout, cpu, checkv_db_dir, pfam_db,
                 input_protein, input_gene, trans_table, single_like_pfam):
     gene_set_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    single_like_pfam = os.path.join(gene_set_dir, 'db', 'single_pfam_099.txt')
+    single_like_pfam = os.path.join(gene_set_dir, 'vclean','db', 'single_pfam_099.txt')
 
     fasta_file_name = os.path.basename(input_fasta)
     basename = os.path.splitext(fasta_file_name)[0]
@@ -252,7 +252,7 @@ def main(args):
     checkv_db_dir, pfam_db = path_to_db(db_dir)
 
     gene_set_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    single_like_pfam = os.path.join(gene_set_dir, 'db', 'single_pfam_099.txt')
+    single_like_pfam = os.path.join(gene_set_dir, 'vclean','db', 'single_pfam_099.txt')
 
     # --------------------------------------------------------------------------
     # sp.run(['mkdir', '-p', tmpout])
