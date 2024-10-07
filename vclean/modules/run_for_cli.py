@@ -285,12 +285,12 @@ def main(args):
 
         script_dir = os.path.dirname(os.path.abspath(__file__))
         model_dir = os.path.dirname(os.path.dirname(script_dir))
-        model_path = os.path.join(model_dir, 'models', 'best_lgb_model_v1.3.2.pickle')
+        model_path = os.path.join(model_dir, 'vclean', 'models', 'best_lgb_model_v1.3.2.pickle')
 
         y_pred_proba_list = []
         for i in range(5):
             model_name = f'best_lgb_model_fold{i}.txt'
-            model_path = os.path.join(model_dir, 'models', model_name)
+            model_path = os.path.join(model_dir, 'vclean', 'models', model_name)
             loaded_model = lgb.Booster(model_file=model_path)
             y_pred_proba = loaded_model.predict(result_for_input)
             y_pred_proba_list.append(y_pred_proba)
