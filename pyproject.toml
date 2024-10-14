@@ -28,5 +28,5 @@ Source = "https://github.com/TsumaR/vclean"
 [project.scripts]
 vclean = "vclean.cli:cli"
 
-[tool.setuptools.package-data]
-"vclean" = ["db/*.txt", "models/*.txt"]
+[tool.flit.sdist]
+include = ["vclean/**", "db/**", "models/**", "LICENSE", "README.md"]

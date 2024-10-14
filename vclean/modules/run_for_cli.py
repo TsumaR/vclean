@@ -34,7 +34,7 @@ from vclean.modules import lgb_model as lgb_model
 def process_file(input_fasta, outdir, run_mode, tmpout, cpu, checkv_db_dir, pfam_db,
                 input_protein, input_gene, trans_table, single_like_pfam):
     gene_set_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    single_like_pfam = os.path.join(gene_set_dir, 'db', 'single_pfam_099.txt')
+    single_like_pfam = os.path.join(gene_set_dir, 'vclean','db', 'single_pfam_099.txt')
 
     fasta_file_name = os.path.basename(input_fasta)
     basename = os.path.splitext(fasta_file_name)[0]
@@ -252,7 +252,7 @@ def main(args):
     checkv_db_dir, pfam_db = path_to_db(db_dir)
 
     gene_set_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    single_like_pfam = os.path.join(gene_set_dir, 'db', 'single_pfam_099.txt')
+    single_like_pfam = os.path.join(gene_set_dir, 'vclean','db', 'single_pfam_099.txt')
 
     # --------------------------------------------------------------------------
     # sp.run(['mkdir', '-p', tmpout])
@@ -285,12 +285,12 @@ def main(args):
 
         script_dir = os.path.dirname(os.path.abspath(__file__))
         model_dir = os.path.dirname(os.path.dirname(script_dir))
-        model_path = os.path.join(model_dir, 'models', 'best_lgb_model_v1.3.2.pickle')
+        model_path = os.path.join(model_dir, 'vclean', 'models', 'best_lgb_model_v1.3.2.pickle')
 
         y_pred_proba_list = []
         for i in range(5):
             model_name = f'best_lgb_model_fold{i}.txt'
-            model_path = os.path.join(model_dir, 'models', model_name)
+            model_path = os.path.join(model_dir, 'vclean', 'models', model_name)
             loaded_model = lgb.Booster(model_file=model_path)
             y_pred_proba = loaded_model.predict(result_for_input)
             y_pred_proba_list.append(y_pred_proba)
